@@ -1,38 +1,141 @@
 .App {
+  min-height: 100vh;
+  text-align: center;
+  width: 100%;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    180deg,
+    rgba(253, 45, 220, 1) 0%,
+    rgba(34, 193, 195, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.taskContainer {
+  width: 80%;
+  min-height: 80vh;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+@media (max-width: 320px) {
+  .taskContainer {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+}
+
+.createTaskContainer {
+  width: 80%;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.createTaskBtn {
+  font-size: 20px;
+  font-family: Arial;
+  width: 60%;
+  height: 10vh;
+  border-width: 3px;
+  color: #fff;
+  border-color: #fff;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-shadow: 1px 1px 0px #fff;
+  background: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.taskListContainer {
+  width: 80%;
+  min-height: 60vh;
+  border-radius: 20px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.taskCard {
+  width: 80%;
+  margin-top: 50px;
+  min-height: 10vh;
+  background-color: rgb(222, 231, 239);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  box-shadow: -3px 3px 47px 11px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: -3px 3px 47px 11px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -3px 3px 47px 11px rgba(0, 0, 0, 0.2);
+}
+.infoSection {
+  text-align: justify;
+  width: 80%;
+  cursor: pointer;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+.priorityHigh {
+  background-color: rgb(230, 27, 27);
   color: white;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.priorityMedium {
+  background-color: rgb(230, 142, 27);
+  color: white;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.priorityLow {
+  background-color: rgb(230, 216, 27);
+  color: white;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.deleteSection {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(222, 231, 239);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  top: -20px;
+  right: -20px;
+  border-radius: 100%;
+  font-size: 23px;
+  color: rgb(230, 52, 52);
 }

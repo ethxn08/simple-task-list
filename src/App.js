@@ -1,12 +1,19 @@
 import "./App.css";
+import Create from "./components/Create";
 import Show from "./components/Show";
+import Update from "./components/Update";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <h1>Euuuu</h1>
-      <button className="btn btn-primary">Create</button>
-      <Show />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Show />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/update/:id" element={<Update />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
