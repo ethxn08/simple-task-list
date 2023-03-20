@@ -1,13 +1,15 @@
-.App {
-  min-height: 100vh;
-  text-align: center;
-  width: 100%;
+body {
   background: rgb(34, 193, 195);
   background: linear-gradient(
     180deg,
     rgba(253, 45, 220, 1) 0%,
     rgba(34, 193, 195, 1) 100%
   );
+  min-height: 100vh;
+  text-align: center;
+  width: 100%;
+}
+.App {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +67,7 @@
 }
 
 .taskListContainer {
-  width: 80%;
+  width: 60%;
   min-height: 60vh;
   border-radius: 20px;
   display: flex;
@@ -138,4 +140,59 @@
   border-radius: 100%;
   font-size: 23px;
   color: rgb(230, 52, 52);
+}
+
+.createPage {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.createForm {
+  width: 60%;
+  min-height: 70vh;
+  border: #fff 2px solid;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.inputContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding: 40px;
+  color: #fff;
+}
+
+input {
+  background: none;
+  color: #fff;
+  border: #fff 2px solid;
+}
+
+select {
+  background: none;
+  background: none;
+  color: #fff;
+  border: #fff 2px solid;
+}
+.option {
+  background-color: #fff !important;
+  background: none;
+  color: #272626;
+  border: #fff 2px solid;
+}
+
+@media (max-width: 500px) {
+  .App {
+    display: none;
+  }
 }
