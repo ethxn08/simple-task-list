@@ -34,6 +34,22 @@ const Show = () => {
     getTasks();
   };
 
+  const confirmDelete = (id) => {
+    Swal.fire({
+      title: "Remove the task ?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        deleteTask(id);
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      }
+    });
+  };
   useEffect(() => {
     console.log(process.env);
     getTasks();
@@ -72,7 +88,10 @@ const Show = () => {
                   <p>{t.description}</p>
                   {returnPriority(t.priority)}
                 </div>
-                <div className="deleteSection" onClick={() => deleteTask(t.id)}>
+                <div
+                  className="deleteSection"
+                  onClick={() => confirmDelete(t.id)}
+                >
                   <i className="fa-solid fa-trash"></i>
                 </div>
               </div>

@@ -8,7 +8,7 @@ const Create = () => {
   const [description, setDescription] = useState("");
   const [done, setDone] = useState("");
   const [name, setName] = useState("");
-  const [priority, setPriority] = useState("High");
+  const [priority, setPriority] = useState("");
 
   const taskCollection = collection(db, "tasks");
 
@@ -64,9 +64,12 @@ const Create = () => {
             </option>
           </select>
         </div>
-        <button className="createTaskBtn" onClick={() => navigate(`/create`)}>
-          Create New Task
-        </button>
+        <div className="buttonContainer">
+          <button className="createTaskBtn">Create New Task</button>
+          <button className="goBackBtn" onClick={() => navigate("/")}>
+            Go Back
+          </button>
+        </div>
       </form>
     </div>
   );
